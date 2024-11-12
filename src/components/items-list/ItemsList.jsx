@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import Card from './Card/Card';
 import './ItemsList.scss';
 
-function ItemList({ setCart }) {
+function ItemList() {
+    const setCart = useOutletContext();
     const [isLoading, setIsLoading] = useState(true);
     const [items, setItems] = useState([]);
 

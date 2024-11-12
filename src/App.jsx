@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NavBar from './components/navigation-bar/NavBar'
-import ItemList from './components/items-list/ItemsList'
-import WelcomePage from './components/welcome-page/WelcomePage'
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [totalItems, setTotalItems] = useState(0)  
@@ -23,8 +22,7 @@ function App() {
   return (
     <>
       <NavBar totalItems={totalItems} />
-      <WelcomePage />
-      <ItemList setCart={onSetCart} />
+      <Outlet context={onSetCart} />
     </>
   )
 }

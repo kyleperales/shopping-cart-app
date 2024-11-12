@@ -14,7 +14,11 @@ function WelcomePage() {
                     We have a wide range of products for you to choose from.
                     Click on the products link to view our products
                 </p>
-                <button className='start-shopping-btn'> Start Shopping! </button>
+                <button
+                    onClick={() => window.location.href = '/shop'}
+                    className='start-shopping-btn'>
+                        Start Shopping!
+                </button>
             </div>
         </div>
     )
