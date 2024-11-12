@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import './../ItemsList.scss'
+import './Card.scss'
 
 function Card({ item, setCart }) {
 
@@ -30,17 +30,27 @@ function Card({ item, setCart }) {
 
     return (
         <div className='card'>
-            <div>
-                <h1>{item.name}</h1>
+            <div className='item'>
+                <img src={item.image} alt={item.title} />
+                <div className='details'>
+                    <span>{item.title}</span>
+                    <div className='price'>
+                        <span>{item.price}</span>
+                        <span> 
+                            <span className="fa fa-star"></span>
+                            {item.rating.rate}
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div className='counter'>
-                <button onClick={onIncrease}>+</button>
-                <input value={count} onChange={onInputChange}></input>
-                <button disabled={count === 0} onClick={onDecrease}>-</button>
+                <button className='counter-btn' onClick={onIncrease}>+</button>
+                <input className='counter-input' value={count} onChange={onInputChange}></input>
+                <button className='counter-btn' disabled={count === 0} onClick={onDecrease}>-</button>
             </div>
 
-            <button onClick={onAddToCart}>Update cart</button>
+            <button className='update-cart-btn' onClick={onAddToCart}>Update cart</button>
         </div>
     )
 }

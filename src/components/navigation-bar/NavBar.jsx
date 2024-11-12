@@ -4,11 +4,13 @@ import './NavBar.scss';
 function NavBar({ totalItems }) {
     return (
         <div className='navbar'>
-            <div className=''>
-                Shoppee Clone
-            </div>
-            <div>
-                In cart: {totalItems}
+            <div className='content'>
+                <div className=''>
+                    Shoppee Clone
+                </div>
+                <div>
+                    In cart: {totalItems}
+                </div>
             </div>
         </div>
     );
