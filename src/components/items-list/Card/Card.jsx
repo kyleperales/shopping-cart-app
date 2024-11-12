@@ -35,7 +35,7 @@ function Card({ item, setCart }) {
                 <div className='details'>
                     <span>{item.title}</span>
                     <div className='price'>
-                        <span>{item.price}</span>
+                        <span>Php. {item.price}</span>
                         <span> 
                             <span className="fa fa-star"></span>
                             {item.rating.rate}
