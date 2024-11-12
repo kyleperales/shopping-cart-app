@@ -5,7 +5,7 @@ function NavBar({ totalItems }) {
     return (
         <div className='navbar'>
             <div className='content'>
-                <div className=''>
+                <div className='shop-name' onClick={() => window.location.href = '/welcome'}>
                     Shoppee Clone
                 </div>
                 <div>
