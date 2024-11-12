@@ -10,7 +10,7 @@ function WelcomePage() {
 
     return (
         <div className='welcome-page'>
-            <div classNam='main-message'>
+            <div className='main-message'>
                 <h1>Welcome to our store</h1>
                 <h4>
                     Your one stop shop for all your needs
