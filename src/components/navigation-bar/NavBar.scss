@@ -1,0 +1,11 @@
+@import './../../styles/colors.scss';
+
+.navbar {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em 5em;
+    align-items: center;
+    background-color: $orange;
+}
