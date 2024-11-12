@@ -9,7 +9,11 @@ function App() {
 
   const onSetCart = (item) => {        
       const newCart = new Map(cart)
-      newCart.set(item.id, { ...item })
+      if (item.count === 0) {
+        newCart.delete(item.id)
+      } else {
+        newCart.set(item.id, { ...item })
+      }
       setCart(newCart)
       setTotalItems(newCart.size)
   }
