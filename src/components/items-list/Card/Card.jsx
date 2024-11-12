@@ -1,10 +1,9 @@
 
-import { useState } from 'react';
+import { useState } from 'react'
 import './Card.scss'
 
 function Card({ item, setCart }) {
-
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0)
 
     const onIncrease = () => {
         setCount(count + 1)

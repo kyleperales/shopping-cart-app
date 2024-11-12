@@ -1,28 +1,28 @@
-import { useEffect, useState } from 'react';
-import { useOutletContext } from 'react-router-dom';
-import Card from './Card/Card';
-import './ItemsList.scss';
+import { useEffect, useState } from 'react'
+import { useOutletContext } from 'react-router-dom'
+import Card from './Card/Card'
+import './ItemsList.scss'
 
 function ItemList() {
-    const setCart = useOutletContext();
-    const [isLoading, setIsLoading] = useState(true);
-    const [items, setItems] = useState([]);
+    const { onSetCart } = useOutletContext()
+    const [isLoading, setIsLoading] = useState(true)
+    const [items, setItems] = useState([])
 
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await fetch('https://fakestoreapi.com/products');
-                const data = await response.json();
-                setItems(data);
+                const response = await fetch('https://fakestoreapi.com/products')
+                const data = await response.json()
+                setItems(data)
             } catch (error) {
-                console.error('Error fetching items:', error);
+                console.error('Error fetching items:', error)
             } finally {
-                setIsLoading(false);
+                setIsLoading(false)
             }
-        };
+        }
 
-        fetchItems();
-    }, []);
+        fetchItems()
+    }, [])
 
     return (
         <div>
@@ -32,7 +32,7 @@ function ItemList() {
                 <div className='list'>
                     {
                         items.map((item, index) => (
-                            <Card key={item.id} item={item} setCart={setCart}/>
+                            <Card key={item.id} item={item} setCart={onSetCart}/>
                         ))
                     }
                 </div>            

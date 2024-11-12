@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import './WelcomePage.scss';
 
 function WelcomePage() {
+    const navigate = useNavigate();
+
+    const routeToShop = () => {
+        navigate('/shop');
+    }
+
     return (
         <div className='welcome-page'>
             <div classNam='main-message'>
@@ -15,7 +22,7 @@ function WelcomePage() {
                     Click on the products link to view our products
                 </p>
                 <button
-                    onClick={() => window.location.href = '/shop'}
+                    onClick={routeToShop}
                     className='start-shopping-btn'>
                         Start Shopping!
                 </button>
