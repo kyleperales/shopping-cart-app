@@ -1,0 +1,59 @@
+@import '../../styles/colors.scss';
+
+.welcome-page {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    color: $black;
+
+    h4 {
+        background-color: $orange;
+        color: $white;
+        text-align: right;
+    }
+
+    .other-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        P {
+            margin-top: 5rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .start-shopping-btn {
+            margin-top: 1rem;
+            padding: 1.5rem 2rem;
+            background-color: $orange;
+            border-radius: 6px;
+            color: $white;
+            border: none;
+            cursor: pointer;
+                    
+            transform: scale(1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 $orange;
+            }
+        
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            }
+        
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
