@@ -1,5 +1,31 @@
 @import './../../styles/colors.scss';
 
+.sub-header {
+    margin: 0 auto;
+    width: 100%;
+    background-color: $white;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        color: $black;
+        font-size: 1.3rem;
+        margin: 20px 0;
+        width: 1000px;
+        height: 50px;
+        margin: 0 auto;
+        padding: 10px;
+        .continue-shopping {
+            color: $orange;
+            cursor: pointer;
+        }
+    }
+
+}
+
 .cart {
     color: $black;
     display: flex;
@@ -32,9 +58,6 @@
                 max-width: 200px;
             }
         }
-        .total {
-            color: $orange;
-        }
         .delete-btn {
             background-color: $white;
             color: $red;
@@ -43,4 +66,7 @@
             cursor: pointer;
         }
     }
+}
+.total {
+    color: $orange;
 }
