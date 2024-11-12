@@ -36,7 +36,6 @@ function InCart() {
                 </div>
             </div>
             <div className='cart'>
-                <h1>In Cart</h1>
                 { 
                     Array.from(cart.entries()).map(([key, value]) => 
                     (
