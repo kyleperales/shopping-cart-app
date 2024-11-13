@@ -1,0 +1,17 @@
+@import './../../styles/colors.scss';
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $red;
+
+    .back-to-shop {
+        font-size: 0.7em;
+        text-align: left;
+    }
+}
