@@ -6,7 +6,7 @@ function NavBar({ totalItems }) {
     const navigate = useNavigate()
 
     const routeToWelcome = () => {
-        navigate('/welcome')
+        navigate('/')
     }
     const routeToCart = () => {
         navigate('/cart')

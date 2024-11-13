@@ -1,16 +1,16 @@
-import App from "./App"
-import InCart from "./components/in-cart/InCart"
-import ItemList from "./components/items-list/ItemsList"
-import WelcomePage from "./components/welcome-page/WelcomePage"
+import App from './App'
+import InCart from './components/in-cart/InCart'
+import ItemList from './components/items-list/ItemsList'
+import WelcomePage from './components/welcome-page/WelcomePage'
 
 const routes = [
     {
         path: '/',
         element: <App />,
-        children: [            
+        children: [
             {
                 index: true,
-                path: 'welcome',
+                path: '',
                 element: <WelcomePage />,
             },
             {

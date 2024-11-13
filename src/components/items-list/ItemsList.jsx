@@ -26,7 +26,7 @@ function ItemList() {
 
     return (
         <div>
-            {isLoading && <div>Loading...</div>}
+            { isLoading && <div>Loading...</div> }
             { !isLoading && items.length === 0 && <div>No items found</div> }
             { !isLoading && items.length > 0 &&
                 <div className='list'>
