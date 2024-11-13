@@ -1,9 +1,14 @@
-import { useNavigate, useNavigation, useOutletContext } from 'react-router-dom'
+import { useNavigate, useOutletContext } from 'react-router-dom'
 import './InCart.scss'
+import { useMemo } from 'react'
 
 function InCart() {
     const { cart, onSetCart } = useOutletContext()
     const navigate = useNavigate()
+
+    const totalPrice = useMemo(() => {
+        return Array.from(cart.values()).reduce((total, item) => (Math.round((total + (item.count * item.price)) * 100) / 100), 0)
+    }, [cart])
 
     const deleteItem = (e) => {
         const item = cart.get(parseInt(e.target.id))
@@ -29,7 +34,7 @@ function InCart() {
                         Cart Total: 
                         <span className='total'>
                             Php. {
-                                Array.from(cart.values()).reduce((total, item) => total + (item.count * item.price), 0)
+                               totalPrice
                             }
                         </span>
                     </span>
